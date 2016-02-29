@@ -1,0 +1,21 @@
+<div>
+	<form action='/' method="post">
+		<div class="form-group">
+		  <label for="exampleInputEmail1">Title your musing</label>
+		  <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Title"/>
+		</div>
+	    <div class="form-group">
+	      <label for="exampleInputPassword1">Pour your heart out</label>
+	      <textarea class="form-control" name="text" rows="3" id="exampleInputPassword1" placeholder="Muse away"></textarea>
+	    </div>
+	    <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+	<div>
+		<% @musings.each do |musing| %>
+			<h1><%= musing.title %></h1>
+			<p><%= musing.text %></p>
+		<% end %>
+	</div>
+</div>
+
